@@ -1,14 +1,14 @@
 [
   {
-    "id": "EW-MU5XBXQP-YKMT",
-    "createdAt": "2026-09-17T19:29:55.345Z",
+    "id": "EW-MU5YA75Q-OXZ0",
+    "createdAt": "2026-09-17T19:56:33.854Z",
     "customer": {
       "fullName": "ALI HASSAN",
-      "email": "ali.5@cs.qau.edu.pk",
+      "email": "al5@cs.qau.edu.pk",
       "phone": "4565478568567",
       "address": "jkasdjkasjkdnjkansd",
       "city": "Rawalpindi",
-      "notes": ""
+      "notes": "sdfgdfgdsfgdfg"
     },
     "items": [
       {
@@ -16,65 +16,19 @@
         "name": "Classic Berliner",
         "price": 420,
         "quantity": 1
-      }
-    ],
-    "deliverySlot": "evening",
-    "paymentMethod": "card",
-    "subtotal": 420,
-    "deliveryFee": 150,
-    "total": 570,
-    "status": "received"
-  },
-  {
-    "id": "EW-MU5W3KNB-39CO",
-    "createdAt": "2026-09-17T18:55:25.511Z",
-    "customer": {
-      "fullName": "ALI HASSAN",
-      "email": "ali.42@gmail.com",
-      "phone": "4565478568567",
-      "address": "jkasdjkasjkdnjkansd",
-      "city": "Rawalpindi",
-      "notes": "345543645674dfgdffd"
-    },
-    "items": [
+      },
       {
-        "productId": "p-005",
-        "name": "Cinnamon Swirl Roll",
-        "price": 400,
-        "quantity": 1
-      }
-    ],
-    "deliverySlot": "morning",
-    "paymentMethod": "cod",
-    "subtotal": 400,
-    "deliveryFee": 150,
-    "total": 550,
-    "status": "received"
-  },
-  {
-    "id": "EW-MU5VUL77-ZT99",
-    "createdAt": "2026-09-17T18:48:26.323Z",
-    "customer": {
-      "fullName": "ALI HASSAN",
-      "email": "ali.5140@gmail.com",
-      "phone": "07890723455",
-      "address": "jkasdjkasjkdnjkansd",
-      "city": "Rawalpindi",
-      "notes": "uauhdaihdaoishdoi"
-    },
-    "items": [
-      {
-        "productId": "p-002",
-        "name": "Butter Croissant",
-        "price": 380,
+        "productId": "p-006",
+        "name": "Chocolate Chunk Cookie",
+        "price": 250,
         "quantity": 1
       }
     ],
     "deliverySlot": "afternoon",
     "paymentMethod": "cod",
-    "subtotal": 380,
+    "subtotal": 670,
     "deliveryFee": 150,
-    "total": 530,
+    "total": 820,
     "status": "received"
   },
   {

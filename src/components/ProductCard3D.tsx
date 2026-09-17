@@ -10,14 +10,11 @@ import {
   useTransform,
 } from "framer-motion";
 import { ShoppingBasket, Check } from "lucide-react";
-
 import type { Product } from "@/types";
-
 import {
   getProductImage,
   PRODUCT_IMAGE_ASPECT,
 } from "@/lib/productImages";
-
 import { useCart } from "@/context/CartContext";
 import { formatPrice } from "@/lib/format";
 
@@ -27,7 +24,6 @@ export function ProductCard3D({
   product: Product;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-
   const { addItem, lastAdded } = useCart();
 
   const mouseX = useMotionValue(0.5);
@@ -83,7 +79,6 @@ export function ProductCard3D({
     e: MouseEvent<HTMLDivElement>
   ) {
     const el = ref.current;
-
     if (!el) return;
 
     const rect = el.getBoundingClientRect();
@@ -115,15 +110,6 @@ export function ProductCard3D({
   }
 
   const justAdded = lastAdded === product.id;
-
-  /*
-   * IMPORTANT:
-   * If product image is "#", don't pass it to Next/Image.
-   */
-  const imageSrc = getProductImage(product.icon);
-
-  const hasImage =
-    imageSrc !== "#" && imageSrc.trim() !== "";
 
   const aspect =
     PRODUCT_IMAGE_ASPECT[product.icon] ?? 1;
@@ -167,8 +153,7 @@ export function ProductCard3D({
             bg-flour
           "
         >
-          {/* Inner border */}
-
+          {/* subtle inner border */}
           <div
             aria-hidden
             className="
@@ -181,8 +166,7 @@ export function ProductCard3D({
             "
           />
 
-          {/* Spotlight */}
-
+          {/* spotlight */}
           <motion.div
             aria-hidden
             className="
@@ -203,7 +187,7 @@ export function ProductCard3D({
           />
 
           {/* =================================================
-              PRODUCT BADGE
+              PREMIUM BADGE
               ================================================= */}
 
           {product.badge && (
@@ -243,8 +227,7 @@ export function ProductCard3D({
               sm:h-[245px]
             "
           >
-            {/* Grounding shadow */}
-
+            {/* soft natural grounding shadow */}
             <motion.div
               aria-hidden
               className="
@@ -264,104 +247,59 @@ export function ProductCard3D({
               }}
             />
 
-            {/* =================================================
-                FLOATING PRODUCT IMAGE
-                ================================================= */}
-
-            {hasImage ? (
-              <motion.div
-                className="
-                  pointer-events-none
-                  absolute
-                  left-1/2
-                  top-[-34px]
-                  z-20
-                  -translate-x-1/2
-                "
-                style={{
-                  x: imageX,
-                  rotate: imageRotate,
-                  translateZ: 70,
-                }}
-                animate={{
-                  y: [0, -7, 0],
-                }}
-                transition={{
-                  duration: 4.8,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-                <div
-                  className="
-                    relative
-                    w-[240px]
-                    sm:w-[265px]
-                    drop-shadow-[0_22px_18px_rgba(36,24,17,0.35)]
-                    transition-transform
-                    duration-500
-                    ease-out
-                    group-hover:scale-[1.045]
-                  "
-                  style={{
-                    aspectRatio: aspect,
-                  }}
-                >
-                  <Image
-                    src={imageSrc}
-                    alt={product.name}
-                    fill
-                    sizes="(max-width: 640px) 240px, 265px"
-                    className="object-contain"
-                    priority={false}
-                  />
-                </div>
-              </motion.div>
-            ) : (
-              /* =================================================
-                 NO IMAGE PLACEHOLDER
-                 ================================================= */
-
+            {/* floating image */}
+            <motion.div
+              className="
+                pointer-events-none
+                absolute
+                left-1/2
+                top-[-34px]
+                z-20
+                -translate-x-1/2
+              "
+              style={{
+                x: imageX,
+                rotate: imageRotate,
+                translateZ: 70,
+              }}
+              animate={{
+                y: [0, -7, 0],
+              }}
+              transition={{
+                duration: 4.8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
               <div
                 className="
-                  absolute
-                  left-1/2
-                  top-1/2
-                  z-20
-                  flex
-                  h-[150px]
-                  w-[150px]
-                  -translate-x-1/2
-                  -translate-y-1/2
-                  items-center
-                  justify-center
-                  rounded-full
-                  border
-                  border-gold/15
-                  bg-white/20
-                  text-center
-                  backdrop-blur-sm
+                  relative
+                  w-[240px]
+                  sm:w-[265px]
+                  drop-shadow-[0_22px_18px_rgba(36,24,17,0.35)]
+                  transition-transform
+                  duration-500
+                  ease-out
+                  group-hover:scale-[1.045]
                 "
+                style={{
+                  aspectRatio: aspect,
+                }}
               >
-                <span
-                  className="
-                    px-5
-                    text-[10px]
-                    uppercase
-                    tracking-[0.2em]
-                    text-espresso/40
-                  "
-                >
-                  Image
-                  <br />
-                  Coming Soon
-                </span>
+                <Image
+                  src={getProductImage(product.icon)}
+                  alt={product.name}
+                  fill
+                  sizes="265px"
+                  className="object-contain"
+                  priority={false}
+                />
               </div>
-            )}
+            </motion.div>
           </div>
 
           {/* =================================================
-              PRODUCT CONTENT
+              PREMIUM PRODUCT CONTENT
               ================================================= */}
 
           <div
@@ -375,8 +313,7 @@ export function ProductCard3D({
               sm:px-7
             "
           >
-            {/* Product Name */}
-
+            {/* Product name */}
             <h3
               className="
                 font-display
@@ -393,8 +330,7 @@ export function ProductCard3D({
               {product.name}
             </h3>
 
-            {/* Product Tagline */}
-
+            {/* Product description */}
             <p
               className="
                 mx-auto
@@ -410,8 +346,7 @@ export function ProductCard3D({
               {product.tagline}
             </p>
 
-            {/* Divider */}
-
+            {/* editorial divider */}
             <div
               className="
                 mx-auto
@@ -431,7 +366,6 @@ export function ProductCard3D({
             </div>
 
             {/* Price */}
-
             <div className="mt-4">
               <span
                 className="

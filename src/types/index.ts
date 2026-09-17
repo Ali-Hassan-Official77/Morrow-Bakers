@@ -7,29 +7,13 @@ export type IconKey =
   | "cookie"
   | "cinnamonroll"
   | "cupcake"
-  | "tart"
-  | "cake"
-  | "danish"
-  | "financier"
-  | "choux"
-  | "bun"
-  | "tiramisu";
-
-export type ProductCategory =
-  | "Breads"
-  | "Viennoiserie"
-  | "Cakes"
-  | "Cookies"
-  | "Pastries"
-  | "Signature"
-  | "Tarts"
-  | "Desserts";
+  | "tart";
 
 export interface Product {
   id: string;
   slug: string;
   name: string;
-  category: ProductCategory;
+  category: "Breads" | "Viennoiserie" | "Cakes" | "Cookies";
   icon: IconKey;
   price: number;
   unit: string;
@@ -62,14 +46,8 @@ export interface OrderCustomer {
   notes?: string;
 }
 
-export type DeliverySlot =
-  | "morning"
-  | "afternoon"
-  | "evening";
-
-export type PaymentMethod =
-  | "cod"
-  | "card";
+export type DeliverySlot = "morning" | "afternoon" | "evening";
+export type PaymentMethod = "cod" | "card";
 
 export interface Order {
   id: string;
@@ -81,26 +59,5 @@ export interface Order {
   subtotal: number;
   deliveryFee: number;
   total: number;
-  status:
-    | "received"
-    | "baking"
-    | "out-for-delivery"
-    | "delivered";
-}
-
-export interface Order {
-  id: string;
-  createdAt: string;
-  customer: OrderCustomer;
-  items: OrderItem[];
-  deliverySlot: DeliverySlot;
-  paymentMethod: PaymentMethod;
-  subtotal: number;
-  deliveryFee: number;
-  total: number;
-  status:
-    | "received"
-    | "baking"
-    | "out-for-delivery"
-    | "delivered";
+  status: "received" | "baking" | "out-for-delivery" | "delivered";
 }

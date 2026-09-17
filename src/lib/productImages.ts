@@ -16,12 +16,6 @@ export const PRODUCT_IMAGES: Record<
   cinnamonroll: "/products/rustic.png",
   cupcake: "/products/cupcake.png",
   tart: "/products/tart.png",
-  cake: "",
-  danish: "",
-  financier: "",
-  choux: "",
-  bun: "",
-  tiramisu: ""
 };
 
 export const PRODUCT_IMAGE_ASPECT: Record<
@@ -37,12 +31,6 @@ export const PRODUCT_IMAGE_ASPECT: Record<
   cinnamonroll: 597 / 884,
   cupcake: 494 / 911,
   tart: 541 / 922,
-  cake: 0,
-  danish: 0,
-  financier: 0,
-  choux: 0,
-  bun: 0,
-  tiramisu: 0
 };
 
 export function getProductImage(

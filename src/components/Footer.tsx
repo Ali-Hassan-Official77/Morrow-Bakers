@@ -1,51 +1,20 @@
 import Link from "next/link";
 import {
   ArrowUpRight,
+  Mail,
   MapPin,
   Phone,
-  Mail,
 } from "lucide-react";
 import { Logo } from "./Logo";
 
-function InstagramIcon({ size = 16 }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <rect
-        x="3"
-        y="3"
-        width="18"
-        height="18"
-        rx="5"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      />
-
-      <circle
-        cx="12"
-        cy="12"
-        r="4"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      />
-
-      <circle
-        cx="17.5"
-        cy="6.5"
-        r="1"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
-
 export function Footer() {
+  const exploreLinks = [
+    ["/shop", "All bakes"],
+    ["/#story", "Our kitchen"],
+    ["/#journal", "Journal"],
+    ["/#visit", "Find us"],
+  ];
+
   return (
     <footer id="visit" className="bg-coffee text-white">
       <div className="container-wide py-16 sm:py-20">
@@ -75,12 +44,7 @@ export function Footer() {
               Explore
             </p>
 
-            {[
-              ["/shop", "All bakes"],
-              ["/#story", "Our kitchen"],
-              ["/#journal", "Journal"],
-              ["/#visit", "Find us"],
-            ].map(([href, label]) => (
+            {exploreLinks.map(([href, label]) => (
               <Link
                 key={href}
                 href={href}
@@ -98,19 +62,19 @@ export function Footer() {
             </p>
 
             <a
-              href="mailto:hello@morrowbakehouse.com"
+              href="mailto:khanshaamil92@gmail.com"
               className="mb-3 flex items-center gap-2 text-sm text-white/65 transition-colors hover:text-white"
             >
               <Mail size={15} />
-              khanshamil192@morrowbakehouse.com
+              khanshaamil92@gmail.com
             </a>
 
             <a
-              href="tel:+923001234567"
+              href="tel:+9230018845217"
               className="mb-3 flex items-center gap-2 text-sm text-white/65 transition-colors hover:text-white"
             >
               <Phone size={15} />
-              +92 300 123 4567
+              +92 300 188 45217
             </a>
 
             <p className="flex items-center gap-2 text-sm text-white/65">
@@ -134,25 +98,42 @@ export function Footer() {
             </p>
 
             <div className="mt-6 flex gap-2">
-
               {/* Instagram */}
               <a
                 href="#"
                 aria-label="Instagram"
-                className="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white/65 transition-all duration-300 hover:border-white/25 hover:bg-white/5 hover:text-white"
+                className="grid h-10 w-10 place-items-center rounded-full border border-white/10 transition-all hover:border-white/25 hover:bg-white/5"
               >
-                <InstagramIcon size={16} />
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="0.8"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
               </a>
 
               {/* External */}
               <a
                 href="#"
                 aria-label="External link"
-                className="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white/65 transition-all duration-300 hover:border-white/25 hover:bg-white/5 hover:text-white"
+                className="grid h-10 w-10 place-items-center rounded-full border border-white/10 transition-all hover:border-white/25 hover:bg-white/5"
               >
                 <ArrowUpRight size={16} />
               </a>
-
             </div>
           </div>
         </div>
