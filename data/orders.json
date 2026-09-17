@@ -1,0 +1,106 @@
+[
+  {
+    "id": "EW-MU5XBXQP-YKMT",
+    "createdAt": "2026-09-17T19:29:55.345Z",
+    "customer": {
+      "fullName": "ALI HASSAN",
+      "email": "ali.5@cs.qau.edu.pk",
+      "phone": "4565478568567",
+      "address": "jkasdjkasjkdnjkansd",
+      "city": "Rawalpindi",
+      "notes": ""
+    },
+    "items": [
+      {
+        "productId": "p-003",
+        "name": "Classic Berliner",
+        "price": 420,
+        "quantity": 1
+      }
+    ],
+    "deliverySlot": "evening",
+    "paymentMethod": "card",
+    "subtotal": 420,
+    "deliveryFee": 150,
+    "total": 570,
+    "status": "received"
+  },
+  {
+    "id": "EW-MU5W3KNB-39CO",
+    "createdAt": "2026-09-17T18:55:25.511Z",
+    "customer": {
+      "fullName": "ALI HASSAN",
+      "email": "ali.42@gmail.com",
+      "phone": "4565478568567",
+      "address": "jkasdjkasjkdnjkansd",
+      "city": "Rawalpindi",
+      "notes": "345543645674dfgdffd"
+    },
+    "items": [
+      {
+        "productId": "p-005",
+        "name": "Cinnamon Swirl Roll",
+        "price": 400,
+        "quantity": 1
+      }
+    ],
+    "deliverySlot": "morning",
+    "paymentMethod": "cod",
+    "subtotal": 400,
+    "deliveryFee": 150,
+    "total": 550,
+    "status": "received"
+  },
+  {
+    "id": "EW-MU5VUL77-ZT99",
+    "createdAt": "2026-09-17T18:48:26.323Z",
+    "customer": {
+      "fullName": "ALI HASSAN",
+      "email": "ali.5140@gmail.com",
+      "phone": "07890723455",
+      "address": "jkasdjkasjkdnjkansd",
+      "city": "Rawalpindi",
+      "notes": "uauhdaihdaoishdoi"
+    },
+    "items": [
+      {
+        "productId": "p-002",
+        "name": "Butter Croissant",
+        "price": 380,
+        "quantity": 1
+      }
+    ],
+    "deliverySlot": "afternoon",
+    "paymentMethod": "cod",
+    "subtotal": 380,
+    "deliveryFee": 150,
+    "total": 530,
+    "status": "received"
+  },
+  {
+    "id": "EW-MTIOGTNQ-KEIB",
+    "createdAt": "2026-09-01T13:03:04.742Z",
+    "customer": {
+      "fullName": "Ali Hassan",
+      "email": "alihassanofficial297@gmail.com",
+      "phone": "03453507068",
+      "address": "Rawalpindi, Pir Mehar ali shah town",
+      "city": "Rawalpindi",
+      "notes": ""
+    },
+    "items": [
+      {
+        "productId": "p-003",
+        "name": "Classic Berliner",
+        "price": 420,
+        "quantity": 4
+      }
+    ],
+    "deliverySlot": "afternoon",
+    "paymentMethod": "cod",
+    "subtotal": 1680,
+    "deliveryFee": 150,
+    "total": 1830,
+    "status": "received"
+  }
+]

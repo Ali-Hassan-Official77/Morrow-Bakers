@@ -1,0 +1,4 @@
+import type {Metadata} from "next";import{DM_Serif_Display,Manrope}from"next/font/google";import"./globals.css";import{CartProvider}from"@/context/CartContext";import{Header}from"@/components/Header";import{Footer}from"@/components/Footer";
+const display=DM_Serif_Display({subsets:["latin"],variable:"--font-display",weight:"400"});const body=Manrope({subsets:["latin"],variable:"--font-body",weight:["400","500","600","700"]});
+export const metadata:Metadata={title:{default:"Morrow Bakehouse — Baked for the moment",template:"%s — Morrow Bakehouse"},description:"Small-batch breads, pastries and cakes baked fresh every morning.",keywords:["bakery","artisan bread","croissant","cakes","pastries","Rawalpindi"],icons:{icon:"/icon.svg"}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" className={`${display.variable} ${body.variable}`}><body><CartProvider><Header/><main>{children}</main><Footer/></CartProvider></body></html>}
